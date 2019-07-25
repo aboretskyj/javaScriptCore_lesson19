@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Lesson_16</title>
+</head>
+<body>
+    <style>
+        body {  font-size: 16px  }
+
+        h2{ 
+            margin-top: 0;
+            text-align: center;
+        }
+
+        #get-form, #post-form{
+            padding: 20px;
+            margin: 10px;
+            float: left;
+            border: 1px solid #000;
+        }
+
+        #get-form button, #post-form button{
+            background: #bb0000;
+            padding:10px 30px;
+            color: white;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        #get-form input, #post-form input{
+            width: 230px;
+            height: 20px;
+        }
+
+        .warning {
+            background-color: rgb(255, 183, 157);
+            font-size: 14px;
+        }
+
+        .warning::placeholder{
+            color:rgb(180, 27, 0);
+        }
+    </style>
+    
+    <div id="get-form">
+        <h2>GET-method form</h2>
+        <form>
+            <label>Name:</label><br>
+            <input type="text" id="userNameFieldGet"><br>
+            <br>
+            <label>Surame:</label><br>
+            <input type="text" id="userSurameFieldGet"><br>
+            <br>
+            <label>Age:</label><br>
+            <input type="text" id="userAgeFieldGet"><br>
+            <br>
+            <label>Address:</label><br>
+            <input type="text" id="userAddressFieldGet"><br>
+            <br>
+        </form>
+        <button id="sendUserInfoByGet">Send Info<br>by GET method</button>
+    </div>
+    
+
+    <div id="post-form">
+        <h2>POST-method form</h2>
+        <form>
+            <label>Name:</label><br>
+            <input type="text" id="userNameFieldPost"><br>
+            <br>
+            <label>Surame:</label><br>
+            <input type="text" id="userSurameFieldPost"><br>
+            <br>
+            <label>Age:</label><br>
+            <input type="text" id="userAgeFieldPost" ><br>
+            <br>
+            <label>Address:</label><br>
+            <input type="text" id="userAddressFieldPost"><br>
+            <br>
+        </form>
+        <button id="sendUserInfoByPost">Send Info<br>by POST method</button>
+    </div>
+
+    <script src="ajax.js"></script>
+
+</body>
+</html>
