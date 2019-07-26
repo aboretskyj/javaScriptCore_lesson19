@@ -41,33 +41,8 @@ $(document).ready(function(){
             userInfo[key] += '.ValidatedByPOST';
             };
 
-            //This code works correctly
-            //
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST','/userPost');
+            $.post("/userPost", userInfo);
             
-            xhr.setRequestHeader('Content-type','application/json'); 
-            xhr.send(JSON.stringify(userInfo));
-
-
-            //This code returns empty object:
-            //
-            // $.post("/userPost", userInfo);
-            
-
-            //This code returns error "Bad request"
-            //in versions 1.5 and later and returns 
-            //empty object in erlier ones:
-            //
-            // $.ajax({
-            //     type: "POST",
-            //     url: "/userPost",
-            //     headers: {
-            //         'Content-Type':'application/json'
-            //     },
-            //     data: "json=" + escape(JSON.stringify(userInfo)),
-            // });
-
         } else { 
             ageInputPost.val("");
             ageInputPost.addClass("warning");

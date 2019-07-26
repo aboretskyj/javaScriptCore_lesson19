@@ -27,7 +27,7 @@ server.get("/userGet", function(request,response){
 server.post("/userPost", function(request,response){
     console.log(request.body);
 
-    var obj = request.query;
+    var obj = request.body;
     obj.userName = "Name";
     obj.userSurname = "Surname";
     obj.userAge = 0;
